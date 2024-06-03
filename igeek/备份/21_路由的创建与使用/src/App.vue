@@ -4,17 +4,13 @@
         <Header></Header>
         <!-- 导航栏，用于在不同的路由之间切换 -->
         <div class="navigate">
-            <!-- replace 无痕浏览 -->
-            <RouterLink replace to="/home" active-class="active">首页</RouterLink>
-            <RouterLink replace to="/news" active-class="active">新闻</RouterLink>
-            <!-- to的三种写法 -->
-            <!-- <RouterLink replace to="/about" active-class="active">关于</RouterLink> -->
-            <!-- <RouterLink replace :to="{ path: '/about' }" active-class="active">关于</RouterLink> -->
-            <RouterLink replace :to="{ name: 'guanyu' }" active-class="active">关于</RouterLink>
+            <RouterLink to="/home" active-class="active">首页</RouterLink>
+            <RouterLink to="/news" active-class="active">新闻</RouterLink>
+            <RouterLink to="/about" active-class="active">关于</RouterLink>
         </div>
         <!-- 路由视图，用于显示对应路由的组件 -->
         <div class="main-content">
-            <RouterView></RouterView>
+            <router-view></router-view>
         </div>
     </div>
 </template>
